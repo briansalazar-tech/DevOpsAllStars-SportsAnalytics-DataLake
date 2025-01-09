@@ -41,7 +41,7 @@ def create_s3_bucket():
         #             "LocationConstraint": "us-west-1",
         #             },
         #     )
-        
+
         print(f"S3 bucket '{bucket_name}' created successfully.")
     except Exception as e:
         print(f"Error creating S3 bucket: {e}")
@@ -83,7 +83,7 @@ def upload_data_to_s3(data):
         line_delimited_data = convert_to_line_delimited_json(data)
 
         # Define S3 object key
-        file_key = "raw-data/nba_player_data.jsonl"
+        file_key = "raw-data/nba_player_data.json"
 
         # Upload JSON data to S3
         s3_client.put_object(
